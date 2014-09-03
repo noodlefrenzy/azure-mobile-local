@@ -1,14 +1,14 @@
-MADCAD API
-==========
+Azure Mobile Services API
+=========================
 
 Introduction
 ------------
 
-This is the canonical source of the MADCAD Mobile Services API.  Mobile Services does not (as yet) provide a way to 
+This is the canonical source of an Azure Mobile Services API.  Mobile Services does not (as yet) provide a way to 
 run the service locally or unit-test the code, so this provides a custom way of doing so, by spooling up a local 
 expressjs server, loading all api/_endpoint_.js files and interrogating their methods.
 
-Tests are under the test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
+Tests are under the azuremobileservices/_servicename_/test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
 They use [Mocha](http://visionmedia.github.io/mocha/#getting-started) and [Should](https://github.com/visionmedia/should.js) 
 to run a spoofed HTTP shell and support BDD-style assertions. 
 
@@ -34,17 +34,10 @@ The Gruntfile inluded here helps test local changes, and then sync and deploy th
 To get started:
 
 + _grunt init_
-  + This will clone the Azure Mobile Services git repository locally at ../../<repo-name>
-	Currently, we're using the mctest-milanz Mobile Service, because we can destroy it with impunity.
+  + This will clone the Azure Mobile Services git repository locally at ./azuremobileservices/_servicename_
 + _grunt build_
   + Runs Lint and Mocha tests on the local codebase.
-+ _grunt deploy_
-  + Copies the local code into the local Mobile Services (hereafter 'alt') enlistment,
-    commits the alt enlistment, and then pushes it to origin.
-    MUST provide --commitMsg="message", and will use the -a flag to ensure files are added after copying.
-+ _grunt deploy_
-  + Copies the local code into the local Mobile Services (hereafter 'alt') enlistment, commits the alt enlistment, and then pushes it to origin.
-
+  
 __NOTE__: For some reason, there are some issues accepting input - when you see a username/password prompt, HIT RETURN FIRST
 This will then allow you to enter your input on the next line.  If your password echoes back to you, you're doing it wrong :)
 
