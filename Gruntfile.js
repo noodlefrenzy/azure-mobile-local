@@ -53,9 +53,6 @@ module.exports = function(grunt) {
         w("To get started:");
         w("  grunt init: The Azure Mobile Services git repository is maintained as a git submodule located at ./azuremobileservice/_servicename_");
         w("  grunt build: Runs Lint and Mocha tests on the local codebase.");
-        w("  grunt deploy: Copies the local code to the local Azure Mobile Services (hereafter 'alt') enlistment,");
-        w("                commits ALL changes in the submodule, and then pushes the changes to master.");
-        w("                MUST provide --commitMsg=\"message\".");
         w("");
         w("NOTE: For some reason, there are some issues accepting input - when you see a username/password prompt, HIT RETURN FIRST");
         w(" This will then allow you to enter your input on the next line.  If your password echoes back to you, you're doing it wrong :)");

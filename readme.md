@@ -8,7 +8,7 @@ This is the canonical source of an Azure Mobile Services API.  Mobile Services d
 run the service locally or unit-test the code, so this provides a custom way of doing so, by spooling up a local 
 expressjs server, loading all api/_endpoint_.js files and interrogating their methods.
 
-Tests are under the azuremobileservices/_servicename_/test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
+Tests are under the ./test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
 They use [Mocha](http://visionmedia.github.io/mocha/#getting-started) and [Should](https://github.com/visionmedia/should.js) 
 to run a spoofed HTTP shell and support BDD-style assertions. 
 
@@ -54,8 +54,4 @@ Here's what you would do if you were starting from scratch:
 	&gt; grunt build
 </pre>
 
-Now you can do development as you see fit.  Once you're ready to push the changes to the server, you would just do:
-
-<pre>
-	&gt; grunt deploy
-</pre>
+Now you can do development as you see fit.  Once you're ready to push the changes to the server, you would just push from the submodule directory to deploy.
