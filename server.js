@@ -1,3 +1,5 @@
+var apiPath = './azuremobileservice/servicename/service/api';
+
 var express = require('express');
 var fs = require('fs');
 
@@ -13,7 +15,6 @@ if (typeof String.prototype.endsWith !== 'function') {
 	}
 }
 
-var apiPath = './azuremobileservice/madcadmobile/service/api';
 var verbs = [ 'delete', 'get', 'patch', 'post', 'put' ];
 var apiFiles = fs.readdirSync(apiPath).filter(function(fn) { return fn.endsWith('.js'); });
 for (var idx=0; idx < apiFiles.length; ++idx) {
