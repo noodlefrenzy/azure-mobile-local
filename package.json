@@ -1,0 +1,25 @@
+{
+  "name": "servicename-api-local",
+  "version": "1.0.0",
+  "description": "Only used for local testing",
+  "//": "Do not copy express or azure dependencies to service/package.json!",
+  "dependencies": {
+    "express": "^4.8.4",
+    "async": "0.9.0",
+    "restler": "3.2.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-shell": "^0.7.0",
+    "grunt-simple-mocha": "^0.4.0",
+    "mocha": "^1.21.4",
+    "should": "^4.0.4"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "author": "noodlefrenzy",
+  "licenses": [],
+  "keywords": []
+}
