@@ -6,7 +6,8 @@ Introduction
 
 This is the canonical source of an Azure Mobile Services API.  Mobile Services does not (as yet) provide a way to 
 run the service locally or unit-test the code, so this provides a custom way of doing so, by spooling up a local 
-expressjs server, loading all api/_endpoint_.js files and interrogating their methods.
+expressjs server, loading all api/_endpoint_.js files and interrogating their methods.  To use, you mount this repo as 
+a submodule to your Azure Mobile Service git repository, and it reaches back into ../service/api to find what it needs.
 
 Tests are under the ./test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
 They use [Mocha](http://visionmedia.github.io/mocha/#getting-started) and [Should](https://github.com/visionmedia/should.js) 
@@ -53,3 +54,9 @@ Here's what you would do if you were starting from scratch:
 </pre>
 
 Now you can do development as you see fit.  Check in the .gitmodules file in your parent to make sure others have access to this submodule.  Fork this submodule yourself and add your own tests, or re-parent your tests to your Azure Mobile Services directory and change one line in the Gruntfile.js and you'll be all set.
+
+Caveats
+-------
+
+I haven't mocked out any Azure services or other AMS-provided classes, so Mobile Services that make use of Azure Tables will need additional mocking before they can be used,
+and the enum-like statusCodes class, for instance, wont exist locally as that gets injected when running within Azure.
