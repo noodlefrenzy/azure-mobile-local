@@ -1,6 +1,0 @@
-[submodule "azuremobileservice/servicename"]
-	path = azuremobileservice/servicename
-	url = https://noodlefrenzy.scm.azure-mobile.net/noodlefrenzy.git
-[submodule "servicename"]
-	path = azuremobileservice\\servicename
-	url = https://noodlefrenzy.scm.azure-mobile.net/noodlefrenzy.git
