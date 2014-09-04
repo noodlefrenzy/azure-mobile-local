@@ -33,25 +33,23 @@ The Gruntfile inluded here helps test local changes, and then sync and deploy th
 
 To get started:
 
-+ _grunt init_
-  + This will clone the Azure Mobile Services git repository locally at ./azuremobileservices/_servicename_
 + _grunt build_
   + Runs Lint and Mocha tests on the local codebase.
   
-__NOTE__: For some reason, there are some issues accepting input - when you see a username/password prompt, HIT RETURN FIRST
-This will then allow you to enter your input on the next line.  If your password echoes back to you, you're doing it wrong :)
-
 Example Fresh Start
 -------------------
 
 Here's what you would do if you were starting from scratch:
 
 <pre>
+	&gt; git clone _your mobile service url_
+	&gt; cd _directory from above_
+	&gt; git submodule add https://github.com/noodlefrenzy/azure-mobile-local.git local
+	&gt; cd local
 	&gt; npm install -g grunt-cli
 	&gt; npm install -g mocha
 	&gt; npm install
-	&gt; grunt init
 	&gt; grunt build
 </pre>
 
-Now you can do development as you see fit.  Once you're ready to push the changes to the server, you would just push from the submodule directory to deploy.
+Now you can do development as you see fit.  Check in the .gitmodules file in your parent to make sure others have access to this submodule.  Fork this submodule yourself and add your own tests, or re-parent your tests to your Azure Mobile Services directory and change one line in the Gruntfile.js and you'll be all set.

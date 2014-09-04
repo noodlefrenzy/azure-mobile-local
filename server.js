@@ -1,4 +1,4 @@
-var apiPath = './azuremobileservice/servicename/service/api';
+var apiPath = '../service/api';
 
 var express = require('express');
 var fs = require('fs');
