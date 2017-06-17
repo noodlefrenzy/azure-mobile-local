@@ -10,13 +10,13 @@ expressjs server, loading all api/_endpoint_.js files and interrogating their me
 a submodule to your Azure Mobile Service git repository, and it reaches back into ../service/api to find what it needs.
 
 Tests are under the ./test directory, and should use the infrastructure outlined in _apptest.js_ to bootstrap the test server.
-They use [Mocha](http://visionmedia.github.io/mocha/#getting-started) and [Should](https://github.com/visionmedia/should.js) 
+They use [Mocha](http://mochajs.org/#getting-started) and [Should](https://github.com/visionmedia/should.js) 
 to run a spoofed HTTP shell and support BDD-style assertions. 
 
 Initial Setup
 -------------
 
-The build process here makes use of [Grunt](http://gruntjs.com/) to run its tasks, and [Mocha](http://visionmedia.github.io/mocha/#getting-started)
+The build process here makes use of [Grunt](http://gruntjs.com/) to run its tasks, and [Mocha](http://mochajs.org/#getting-started)
 to run its tests.  For initializing the Mobile Services Git repo and pushing changes, it also requires git to be in your path.  As such, before starting,
 you should install the following:
 
